@@ -1,0 +1,12 @@
+# project 2
+task 1:
+create a table using html which consist of table headings name,location,phonenumber,select check box(# example student)
+task 2:
+implement paginator and  put proceed button under table if click happen on proceed display total number selected numbers  in second screen implement textarea and document  in second screen
+task3:
+put preview button if click happen  on preview button display the whole screen of selected numbers and note only in read mode below save button if click on save datashould be save in db
+
+task 4:
+display the reports  with datetime phonenumber,note,document-link and numbers should be displayed in masked format.
+
+with table headings [student_name,student_location,student_phone_number]  

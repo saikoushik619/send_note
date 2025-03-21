@@ -1,0 +1,45 @@
+{% spaceless %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+    <link rel="stylesheet" href="{% static 'student_updates/studentDetails.css' %}">
+
+</head>
+
+<body>
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    <h2>Student details:</h2>
+    <label>
+        Enter Program Name :
+        <input type="text" id="program" required/>
+        <br>
+        <br>
+        <br>
+    </label>
+
+    <select name="places" id="locationDropdown">
+        <option value="allLocations">All Locations</option>
+    </select>&nbsp;&nbsp;
+    <button id="selectButton">Search</button>&nbsp;&nbsp;
+    <a href="{% url 'selected_students_url' %}">
+        <button id="nextPage">proceed</button>
+    </a>
+
+
+    <div id="student-grid" style="height:500px; width:70%;" class="ag-theme-alpine" align="center"></div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="{% static 'student_details1.js' %}"></script>
+
+</body>
+
+</html>
+{% endspaceless %}

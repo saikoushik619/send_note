@@ -1,0 +1,25 @@
+{%load static%}
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body id="body">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    <h5 >Program Name:</h5><p id="Program_name"></p>
+    <h4 >Total selected students:</h4><p id="selected"></p>
+    <label>enter a note: <textarea id="textarea" style="width:10%; height: 150px"></textarea>
+    </label>&nbsp;&nbsp;&nbsp; <label>choose a document: <input type="file" id="document" name="file"/>
+      <br>
+      <br>
+    </label>
+
+      <a href="{% url 'student_report_url' %}"><button id="saveButton">Save</button></a>
+
+    <div id="student-grid" style="height:300px; width:70%; display:incline;" class="ag-theme-alpine"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'student_preview.js' %}"></script>
+  </body>
+</html>
+{% endspaceless %}

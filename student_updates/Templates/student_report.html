@@ -1,0 +1,20 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+    <title>Title</title>
+</head>
+<body>
+    <h3> student reports </h3>
+    <a href="{% url 'programDetails' %}"><button>ProgramDetails</button></a>  <br><br><br><br><br>
+    <div id="student-grid" style="height:500px; width:40%; display:incline;" class="ag-theme-alpine"></div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <script src="{% static 'student_report.js' %}"></script>
+</body>
+</html>

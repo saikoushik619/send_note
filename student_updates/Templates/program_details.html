@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h3>programDetails:</h3>
+    <div align="center">
+            <h5>ProgramName:</h5>&nbsp;<p id="ptag"></p>
+            <h5>StudentCount:</h5>&nbsp;<p id="studentCount"></p>
+            <h5>DocumentLink</h5>&nbsp;<p id="DocLink"></p>
+           <h5>ProgramDate</h5>&nbsp;<p id="Date"></p><br>
+             <label>enter a note: <textarea id="textarea" style="width:10%; height: 100px"></textarea>
+    </label>
+
+
+    <div id="student-grid" style="height:200px; width:40%; display:incline;" class="ag-theme-alpine"></div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <script src="{% static 'programDetails.js' %}"></script>
+</body>
+</html>
